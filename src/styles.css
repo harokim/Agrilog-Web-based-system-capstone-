@@ -1,0 +1,145 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.app-shell {
+  display: flex;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.app-content {
+  margin-left: 60px;
+  width: calc(100% - 60px);
+  min-height: 100vh;
+  transition: 0.3s ease;
+}
+
+
+.sidebar.open ~ .app-content {
+  margin-left: 220px;
+  width: calc(100% - 220px);
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 60px;
+  height: 100vh;
+
+  background: #0d1b2a;
+  color: white;
+
+  padding: 10px;
+  transition: 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  width: 220px;
+}
+
+
+.logo {
+  margin-bottom: 20px;
+}
+
+
+.sidebar a {
+  display: block;
+  padding: 10px 0;
+  color: white;
+  text-decoration: none;
+}
+
+
+.sidebar button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.sidebar.closed a,
+.sidebar.closed button,
+.sidebar.closed .logo {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.page-bg {
+  min-height: 100vh;
+
+
+  background-image: url("/src/assets/bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.page-overlay {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 20px;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  color: white;
+}
+
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  color: black;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+
+.list-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.sub-text {
+  font-size: 12px;
+  color: gray;
+}
+
+
+input, textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+}
+
+
+button {
+  padding: 10px;
+  cursor: pointer;
+}
