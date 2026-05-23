@@ -15,7 +15,6 @@ export function RequestProvider({ children }) {
     }
   ]);
 
-
   const createRequest = (data) => {
     const newRequest = {
       id: "REQ-" + Date.now(),
@@ -27,7 +26,6 @@ export function RequestProvider({ children }) {
     setRequests((prev) => [newRequest, ...prev]);
   };
 
-
   const updateStatus = (id, status) => {
     setRequests((prev) =>
       prev.map((r) =>
@@ -35,7 +33,6 @@ export function RequestProvider({ children }) {
       )
     );
   };
-
 
   const addNote = (id, note) => {
     setRequests((prev) =>
